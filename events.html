@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script>
+    $(document).ready(function (){
+    //   $('#id1').click(function (){
+    //       alert('click');
+    //   });
+
+    //   $('#id2').dblclick(function (){
+    //       alert('click');
+    //   });
+
+    //   $('#id3').hover(function (){
+    //       alert('click');
+    //   });
+
+      $('input').focus(function (){
+          $(this).css("background-color", 'yellow');
+      });
+
+      $('input').blur(function (){
+          $(this).css("background-color", 'green');
+      });
+
+      $('input').on('click, keyup', function(){
+        console.log('edit');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <p id="id1" class="class1">tekst1</p>
+  <p id="id2" class="class1">tekst2</p>
+  <p id="id3" class="class1">tekst3</p>
+
+  <input type="text" name="name">
+  <input type="text" name="lastname">
+
+</body>
+
+</html>

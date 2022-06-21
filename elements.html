@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+  <script>
+    $(document).ready(function (){
+      $('#text').click(function () {
+        alert($('#id1').text());
+      });
+
+      $('#html').click(function () {
+        alert($('#id1').html());
+      });
+
+      $('#val').click(function () {
+        alert($('[name="text"]').val());
+      });
+
+      $('#settext').click(function () {
+        $('#id1').text('nowy text');
+      });
+
+      $('#sethtml').click(function () {
+        $('#id1').html('<b>nowy tekst</b>');
+      });
+
+      $('#append').click(function () {
+        $('li:last').append('value');
+      });
+
+      $('#append2').click(function () {
+        $('ul').append('<li>4</li>');
+      });
+
+      $('#after').click(function () {
+        $('li:first').after('<li>4</li>');
+      });
+
+      $('#before').click(function () {
+        $('li:first').before('<li>4</li>');
+      });
+
+      $('#remove').click(function () {
+        $('li:first').remove();
+      });
+
+      $('#empty').click(function () {
+        $('ul').empty();
+      });
+
+      $('#addClass').click(function () {
+        $('#id1').addClass('red');
+      });
+
+      $('#removeClass').click(function () {
+        $('#id1').removeClass('red');
+      });
+
+      $('#toggleClass').click(function () {
+        $('#id1').toggleClass('red');
+      });
+
+      $('#css').click(function () {
+        // $('#id1').css('color', 'blue');
+        // $('#id1').css('font-size', '20px');
+        $('#id1').css({
+            'font-size':'20px',
+            'color': 'green'
+         });
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <p id="id1" class="class1">tekst z <b>elementu</b> p</p>
+  <input type="text" name="text">
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+  <button id="text">text</button>
+  <button id="html">html</button>
+  <button id="val">val</button>
+  <button id="settext">settext</button>
+  <button id="sethtml">sethtml</button>
+  <button id="setval">setval</button>
+  <button id="append">append</button>
+  <button id="append2">append2</button>
+  <button id="after">after</button>
+  <button id="before">before</button>
+  <button id="remove">remove</button>
+  <button id="empty">empty</button>
+  <button id="addClass">addClass</button>
+  <button id="removeClass">removeClass</button>
+  <button id="toggleClass">toggleClass</button>
+  <button id="css">css</button>
+</body>
+
+</html>
